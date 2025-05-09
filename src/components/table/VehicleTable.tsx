@@ -12,7 +12,7 @@ import {
   } from "@nextui-org/react";
   import { useMemo, useState } from "react";
   
-  type VehicleType = "Motor" | "Trailer";
+  type VehicleType = "Motor" | " ";
   type VehicleStatus = "On trip" | "In maintenance" | "Available";
   
   interface Vehicle {
@@ -30,7 +30,7 @@ import {
   
   const columns = [
     { name: "Placa", uid: "plate" },
-    { name: "Frota", uid: "fleetNumber" },
+    { name: "Frota", uid: "fleet" },
     { name: "Tipo", uid: "type" },
     { name: "Modelo", uid: "model" },
     { name: "Status", uid: "status" },

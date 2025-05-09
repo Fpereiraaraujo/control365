@@ -14,6 +14,7 @@ const [vehicles, setVehicles] = useState<VehicleResponse[]>([]);
 async function fetchVehicles(){
     try{
         const value = await VehicleBusiness.fetchVehicles()
+        console.log("value dos veiculos",value)
         setVehicles(value)
     }catch(error){
         throw new Error("Error fetching vehicles")

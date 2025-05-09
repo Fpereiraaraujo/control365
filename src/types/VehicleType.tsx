@@ -1,16 +1,18 @@
-export type VehicleStatus = 'On trip' | 'In maintenance' | 'Available';
+export type VehicleStatus = 'active' | 'In maintenance' | 'Available';
 
-export type VehicleType = 'Motor' | 'Trailer'; 
+export type VehicleType = 'vehicle' | 'others'; 
 
 export interface VehicleResponse {
-  plate: string;          // Placa
-  fleetNumber: string;    // Frota
-  type: VehicleType;      // Tipo
-  model: string;          // Modelo
-  status: VehicleStatus;  // Status
+  id: string;            
+  plate: string;         
+  fleet: string;
+  type: VehicleType;      
+  model: string;   
+  nameOwner: string;
+  status: VehicleStatus;  
+  createdAt: string; 
 }
 
-// Renomeie a interface para algo mais descritivo
 export interface VehicleItem {
   items: VehicleResponse;
 }

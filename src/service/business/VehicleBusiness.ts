@@ -12,11 +12,14 @@ interface VehicleApiResponse {
       const items = Array.isArray(response.items) ? response.items : [response.items];
   
       return items.map((item) => ({
-        plate: item.plate,
-        fleetNumber: item.fleetNumber,
-        type: item.type,
-        model: item.model,
-        status: item.status,
+        id: item.id,;            
+        plate: item.plate,;         
+        fleet: item.fleet;
+        type: item.type as VehicleType;      
+        model: item.model;   
+        nameOwner: items.nameOwner;
+        status: items.status;  
+        createdAt: items.createdAt; 
       }));
     },
   };
